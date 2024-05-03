@@ -89,6 +89,7 @@ Below is a list of the technologies and dependencies used in the project:
 ## Contributors
 
 [<img src="https://github.com/jamirou.png?size=70" alt="jamirou" style="border-radius: 50%;">](https://github.com/jamirou)
+[<img src="https://github.com/Catatlina-Mobile.png?size=70" alt="Catatlina-Mobile" style="border-radius: 50%;">](https://github.com/Catatlina-Mobile)
 
 ## Contributing Guidelines
 
