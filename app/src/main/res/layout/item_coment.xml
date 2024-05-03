@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/navi3"
+    app:cardCornerRadius="15dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="8dp"
+    app:strokeColor="@android:color/transparent"
+    app:strokeWidth="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navi3"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/Iv_image_profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/usuario"
+            app:shapeAppearance="@style/ImageStyle_Circle" />
+
+        <TextView
+            android:id="@+id/Tv_names_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/Tv_date_comment"
+            android:layout_toEndOf="@+id/Iv_image_profile"
+            android:text="@string/Tv_names_comment"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Tv_date_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/Tv_date_comment"
+            android:textColor="@color/almostWhite"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/Tv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Tv_names_comment"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toStartOf="@+id/Tv_date_comment"
+            android:layout_toEndOf="@+id/Iv_image_profile"
+            android:maxLines="6"
+            android:text="@string/Tv_comment"
+            android:textColor="@color/almostWhite"
+            android:textSize="17sp"
+            android:textStyle="italic" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Tv_date_comment"
+            android:layout_toStartOf="@+id/Tv_date_comment"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_centerVertical="true"
+            android:backgroundTint="@color/navi1"
+            android:src="@drawable/ic_comment" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

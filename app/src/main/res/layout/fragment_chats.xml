@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/naviBlack"
+    android:orientation="vertical"
+    tools:context=".fragments.FragmentChats">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/SearchMV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/naviBlack"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp">
+
+        <EditText
+            android:id="@+id/Et_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:hint="@string/Et_search"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/almostWhite"
+            app:drawableStartCompat="@drawable/ic_search">
+        </EditText>
+
+    </com.google.android.material.card.MaterialCardView>
+
+<!--    <com.google.android.gms.ads.AdView-->
+<!--        xmlns:ads="http://schemas.android.com/apk/res-auto"-->
+<!--        android:id="@+id/adViewChats"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_below="@+id/Et_search"-->
+<!--        ads:adSize="SMART_BANNER"-->
+<!--        ads:adUnitId="@string/ID_Test_BannerDetailSeller">-->
+<!--    </com.google.android.gms.ads.AdView>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ChatsRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_chats">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

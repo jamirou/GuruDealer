@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/naviBlack"
+    tools:context=".LoginOptionsActivity">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ButtonsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <!-- Image and buttons login-->
+        <RelativeLayout
+            android:id="@+id/topContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <ImageView
+                android:id="@+id/guruId"
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/guru" />
+
+            <TextView
+                android:id="@+id/SignInText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guruId"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="25dp"
+                android:text="@string/SignInWith"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/LLICons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/SignInText"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/log_in_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginEnd="20dp"
+                        android:clickable="true"
+                        android:contentDescription="@string/gmail_icon"
+                        android:focusable="true"
+                        android:src="@drawable/email" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/log_in_email"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/gmailText"
+                        android:textColor="@color/almostWhite" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/log_in_google"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:contentDescription="@string/google_icon"
+                        android:src="@drawable/google" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/log_in_google"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/googleText"
+                        android:textColor="@color/almostWhite" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:id="@+id/View1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ButtonsContainer"
+        android:layout_marginTop="10dp"
+        android:background="@color/navi1" />
+
+    <!--Terms and conditions-->
+    <RelativeLayout
+        android:id="@+id/termsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/View1"
+        android:layout_marginTop="5dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/termsTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/Title_termsConditions"
+            android:textColor="@color/almostWhite" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_below="@id/termsTextView"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:checked="false"
+            android:textColor="@color/almostWhite"
+            android:textOff="Leer"
+            android:textOn="Ocultar" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toggleButton"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/fullTermsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="@string/termsandconditions"
+                android:textColor="@color/almostWhite" />
+        </ScrollView>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/View2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/termsContainer"
+        android:layout_marginTop="10dp"
+        android:background="@color/navi1" />
+
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/naviBlack"
+    android:padding="5dp"
+    tools:context=".fragments.My_Ads_Published_Fragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/Ll_Search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="5">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/SearchCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:backgroundTint="@color/naviBlack"
+            app:strokeWidth="0dp"
+            app:strokeColor="@android:color/transparent"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="true">
+
+            <EditText
+                android:id="@+id/Et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:hint="@string/Et_search"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/almostWhite"
+                app:drawableStartCompat="@drawable/ic_search" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:id="@+id/Ib_Clear"
+            android:src="@drawable/ic_clear"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/my_announcesRV"
+        android:backgroundTint="@color/naviBlack"
+        android:background="@color/naviBlack"
+        android:layout_below="@+id/Ll_Search"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="3"
+        tools:listitem="@layout/item_announces_new_version"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>

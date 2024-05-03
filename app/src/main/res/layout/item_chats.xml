@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/navi3"
+    app:cardCornerRadius="15dp"
+    app:strokeWidth="0dp"
+    app:strokeColor="@android:color/transparent"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        app:strokeWidth="0dp"
+        app:strokeColor="@android:color/transparent"
+        android:layout_height="wrap_content">
+
+        <!--        Profile Image-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/Iv_Profile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:shapeAppearance="@style/ImageStyle_Circle"
+            android:layout_marginEnd="10dp"
+            android:scaleType="centerCrop"
+            tools:src="@tools:sample/avatars" />
+
+        <!--        Name-->
+        <TextView
+            android:id="@+id/Tv_names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/Tv_date"
+            android:textColor="@color/white"
+            android:layout_toEndOf="@id/Iv_Profile"
+            android:textStyle="bold"
+            tools:text="@tools:sample/full_names" />
+
+        <!--        Last message-->
+        <TextView
+            android:id="@+id/Tv_last_message"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Tv_names"
+            android:textStyle="italic"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/Iv_Profile"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="@tools:sample/lorem[10]" />
+
+        <!--        Date-->
+        <TextView
+            android:id="@+id/Tv_date"
+            android:layout_width="wrap_content"
+            android:textColor="@color/almostWhite"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/Tv_date" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

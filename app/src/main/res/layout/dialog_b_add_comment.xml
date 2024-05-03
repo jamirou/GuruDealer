@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/naviBlack"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:text="@string/Txt_Add_comment"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/Ib_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent"
+        android:padding="5dp"
+        android:src="@drawable/ic_close_dialog" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TIL_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@color/white"
+        android:layout_below="@+id/Ib_close"
+        app:hintTextColor="@color/white"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/Et_add_comment"
+            android:layout_width="match_parent"
+            android:textColorHint="@color/white"
+            android:background="@color/navi2"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:hint="@string/Et_add_comment"
+            android:inputType="textMultiLine|textCapSentences" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Btn_comment"
+        android:layout_width="280dp"
+        app:tint="@color/white"
+        android:backgroundTint="@color/navi1"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TIL_comment"
+        android:layout_marginTop="20dp"
+        android:text="@string/Btn_comment"
+        android:textAllCaps="true" />
+
+</RelativeLayout>

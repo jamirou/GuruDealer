@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/naviBlack"
+    android:paddingHorizontal="10dp"
+    tools:context=".DeleteAccountActivity">
+
+    <RelativeLayout
+        android:id="@+id/ToolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_toolbar_height">
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Overline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/Txt_deleteAccount"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/Ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_back" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/navi1" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="290dp"
+        android:layout_above="@+id/Tv_deleteAccount"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/guru" />
+
+    <TextView
+        android:id="@+id/Tv_deleteAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/Txt_messageDelete"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/Btn_deleteAccount"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/Tv_deleteAccount"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/navi1"
+        android:text="@string/Btn_deleteAccount"
+        android:textAllCaps="true"
+        app:icon="@drawable/ic_warning"
+        app:iconGravity="textStart"
+        app:iconSize="20dp" />
+
+
+</RelativeLayout>

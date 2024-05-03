@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/naviBlack"
+    tools:context=".detail_seller.ProfileViewActivity">
+
+    <RelativeLayout
+        android:id="@+id/ToolbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_toolbar_height"
+        android:layout_marginBottom="5dp"
+        android:background="@color/naviBlack">
+
+        <ImageButton
+            android:id="@+id/Ib_regresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/Txt_Seller"
+            style="@style/TextAppearance.MaterialComponents.Overline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/Txt_comments"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/naviBlack" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/RlContainerPadding"
+        android:paddingHorizontal="10dp"
+        android:layout_below="@+id/ToolbarRL"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/ProfileMCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/navi1"
+            android:backgroundTint="@color/navi1"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="false"
+            app:contentPadding="10dp"
+            app:strokeColor="@android:color/transparent"
+            app:strokeWidth="0dp">
+
+            <RelativeLayout
+                android:id="@+id/RL_user_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/Iv_seller"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/usuario"
+                    app:shapeAppearance="@style/ImageStyle_Circle" />
+
+                <TextView
+                    android:id="@+id/TV_names"
+                    style="@style/TextAppearance.MaterialComponents.Overline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/Iv_seller"
+                    android:text="@string/TV_names"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Txt_member"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TV_names"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@+id/Iv_seller"
+                    android:text="@string/Txt_member"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/Tv_member"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/TV_names"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@+id/Txt_member"
+                    android:text="@string/Tv_member"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Item_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Tv_member"
+                    android:layout_marginTop="2dp"
+                    android:layout_toEndOf="@id/Iv_seller"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/white"
+                    android:textStyle="italic"
+                    tools:text="@string/Et_email" />
+
+                <TextView
+                    android:id="@+id/Txt_details"
+                    style="@style/TextAppearance.MaterialComponents.Overline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Item_email"
+                    android:layout_centerHorizontal="false"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/Iv_seller"
+                    android:text="@string/txt_detailsuser"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+                <ImageView
+                    android:id="@+id/Iv_coments"
+                    android:layout_width="60dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@drawable/coment" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/View02"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/RlContainerPadding"
+        android:background="@color/navi1" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/View02"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RV_comments_add_comment"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/AnnouncesRV"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_coment" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/View02"
+            android:paddingHorizontal="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Txt_announces"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/Txt_announces"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/Tv_num_announces"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/View02"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/Txt_announces"
+                android:text="@string/Tv_num_announces"
+                android:textColor="@color/white"
+                android:textStyle="bold|italic" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/AnnouncesRV"
+            android:paddingHorizontal="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            android:orientation="vertical"
+            tools:listitem="@layout/item_announces_new_version" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>

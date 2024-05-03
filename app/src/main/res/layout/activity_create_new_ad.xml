@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/naviBlack"
+    tools:context=".advertisements.Create_new_ad">
+
+    <RelativeLayout
+        android:id="@+id/RL_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/naviBlack">
+
+        <ImageView
+            android:id="@+id/AddImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/add_img"
+            android:src="@drawable/agregar" />
+
+        <ImageButton
+            android:id="@+id/Ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_back" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RL_image"
+        android:background="@color/naviBlack"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Delete Image-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RV_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/navi2"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="4"
+                tools:listitem="@layout/item_selected_images" />
+
+            <!--Model && Price-->
+            <LinearLayout
+                android:id="@+id/LLContainer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/RV_images"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <!--product marca-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TIL_Marca"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundColor="@color/navi2"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:hintTextColor="@color/almostWhite">
+
+                    <EditText
+                        android:id="@+id/Et_marca"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/navi2"
+                        android:hint="@string/Et_marca"
+                        android:inputType="textPersonName|textCapSentences"
+                        android:shadowColor="@color/white"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Price-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TIL_Price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/naviBlack"
+                    android:textColorHint="@color/white"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:hintTextColor="@color/almostWhite">
+
+                    <EditText
+                        android:id="@+id/Et_Price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/navi2"
+                        android:hint="@string/Et_Price"
+                        android:inputType="number"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <!-- Category && Condition -->
+            <LinearLayout
+                android:id="@+id/LLContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LLContainer2"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!--Category-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TIL_Category"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="3dp"
+                    android:layout_weight="1"
+                    android:background="@color/navi2"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundColor="@color/navi2"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:endIconTint="@color/white"
+                    app:hintTextColor="@color/almostWhite">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/Category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/navi2"
+                        android:hint="@string/Category"
+                        android:inputType="none"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Condition-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TIL_Condition"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/navi2"
+                    android:textColorHint="@color/white"
+                    app:boxBackgroundColor="@color/navi2"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:endIconTint="@color/white"
+                    app:hintTextColor="@color/almostWhite">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/Condition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/navi2"
+                        android:hint="@string/Condition"
+                        android:inputType="none"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <!--Location-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_Location"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LLContainer"
+                android:layout_marginTop="10dp"
+                android:background="@color/naviBlack"
+                android:textColorHint="@color/white"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:endIconTint="@color/white"
+                app:hintTextColor="@color/almostWhite">
+
+                <AutoCompleteTextView
+                    android:id="@+id/Location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/navi2"
+                    android:hint="@string/Location"
+                    android:inputType="none"
+                    android:textColor="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--Title-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TIL_Location"
+                android:layout_marginTop="10dp"
+                android:background="@color/naviBlack"
+                android:textColorHint="@color/white"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:hintTextColor="@color/almostWhite">
+
+                <EditText
+                    android:id="@+id/Et_Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/navi2"
+                    android:hint="@string/Et_Title"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:textColor="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Description-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TIL_Title"
+                android:layout_marginTop="15dp"
+                android:background="@color/navi2"
+                android:textColorHint="@color/white"
+                app:boxCornerRadiusBottomEnd="8dp"
+                app:boxCornerRadiusBottomStart="8dp"
+                app:boxCornerRadiusTopEnd="8dp"
+                app:boxCornerRadiusTopStart="8dp"
+                app:hintTextColor="@color/almostWhite">
+
+                <EditText
+                    android:id="@+id/Et_Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/navi2"
+                    android:gravity="top|start"
+                    android:hint="@string/Et_Description"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minHeight="100dp"
+                    android:textColor="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Publish Btn-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Btn_create_announcement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TIL_Description"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/navi1"
+                android:text="@string/Btn_create_announcement"
+                android:textAllCaps="true"
+                app:cornerRadius="8dp"
+                app:tint="@color/white" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_below="@+id/scrollView"
+        android:layout_centerHorizontal="true"
+
+        android:src="@drawable/guru" />
+
+
+</RelativeLayout>

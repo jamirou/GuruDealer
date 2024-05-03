@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/naviBlack"
+    tools:context=".DetailAnnounce.DetailAnnonce">
+
+    <!--    Toolbar-->
+    <RelativeLayout
+        android:id="@+id/ToolbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_toolbar_height"
+        android:background="@color/naviBlack">
+
+        <ImageButton
+            android:id="@+id/Ib_regresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <!--Edit-->
+        <ImageButton
+            android:id="@+id/Ib_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/Ib_fav"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_edit_ad" />
+
+        <!--Delete AD-->
+        <ImageButton
+            android:id="@+id/Ib_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@id/Ib_edit"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_delete_ad" />
+
+
+        <!--Fav ic-->
+        <ImageButton
+            android:id="@+id/Ib_fav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_no_fav" />
+
+
+    </RelativeLayout>
+
+    <!--Ad info-->
+    <ScrollView
+        android:id="@+id/SV_info_ad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ToolbarRL"
+        android:background="@color/naviBlack">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+
+            <!--Show Ad Images-->
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/Image_sliderVP"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@color/navi2" />
+
+            <View
+                android:id="@+id/LinearView"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="2dp"
+                android:layout_height="1dp"
+                android:layout_below="@+id/Image_sliderVP"
+                android:background="@color/almostWhite" />
+
+
+            <!--Price simbol-->
+            <TextView
+                android:id="@+id/Tv_simbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LinearView"
+                android:text="@string/Tv_simbol"
+                android:textColor="@color/white" />
+            <!--Price-->
+            <TextView
+                android:id="@+id/Tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LinearView"
+                android:layout_marginStart="5dp"
+                android:layout_toEndOf="@id/Tv_simbol"
+                android:text="@string/Tv_price"
+                android:textColor="@color/white" />
+
+            <!--Product status-->
+            <TextView
+                android:id="@+id/Tv_condition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LinearView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/Tv_condition"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold|italic" />
+
+            <!--            Date AD-->
+            <TextView
+                android:id="@+id/Tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/LinearView"
+                android:layout_alignParentEnd="true"
+                android:text="@string/Tv_date"
+                android:textColor="@color/white" />
+
+            <!--            Title-->
+            <TextView
+                android:id="@+id/Txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Tv_date"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--            Product name-->
+            <TextView
+                android:id="@+id/Tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Tv_status"
+                android:layout_centerHorizontal="false"
+                android:layout_marginTop="20dp"
+                android:text="@string/Tv_title"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/Tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Txt_title"
+                android:text="@string/Tv_status"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <!--Category text-->
+            <TextView
+                android:id="@+id/Txt_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Tv_descr"
+                android:layout_marginTop="20dp"
+                android:text="@string/Txt_category"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!--            Category-->
+            <TextView
+                android:id="@+id/Tv_cat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Tv_descr"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/Txt_category"
+                android:text="@string/Tv_cat"
+                android:textColor="@color/white"
+                android:textStyle="italic" />
+
+            <!--            text description-->
+            <TextView
+                android:id="@+id/Txt_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Txt_category"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--            Description AD-->
+            <TextView
+                android:id="@+id/Tv_descr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Tv_title"
+                android:layout_centerHorizontal="false"
+                android:layout_marginTop="5dp"
+                android:text="@string/Tv_descr"
+                android:textColor="@color/almostWhite"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+            <!--            Text Direction-->
+            <TextView
+                android:id="@+id/Txt_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Txt_category"
+                android:layout_marginTop="5dp"
+                android:text="@string/Txt_direction"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!--            Direction-->
+            <TextView
+                android:id="@+id/Tv_direction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Txt_category"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/Txt_direction"
+                android:text="@string/Tv_direction"
+                android:textColor="@color/white"
+                android:textStyle="italic" />
+
+            <!--            Views-->
+            <TextView
+                android:id="@+id/Txt_Views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Tv_direction"
+                android:layout_marginTop="5dp"
+                android:text="@string/Txt_views"
+                android:textColor="@color/navi1"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <!--            Tv view-->
+            <TextView
+                android:id="@+id/Tv_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Tv_direction"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/Txt_direction"
+                android:text="@string/Tv_views"
+                android:textColor="@color/navi1"
+                android:textStyle="italic" />
+
+            <!--            text seller-->
+            <TextView
+                android:id="@+id/Txt_Seller"
+                style="@style/TextAppearance.MaterialComponents.Overline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Tv_direction"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:text="@string/Txt_Seller"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/Profile_seller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Txt_Seller"
+                android:layout_marginTop="5dp"
+                android:background="@color/navi1"
+                android:backgroundTint="@color/navi1"
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="false"
+                app:contentPadding="10dp"
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="0dp">
+
+                <!--Profile Image seller-->
+                <RelativeLayout
+                    android:id="@+id/RL_user_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/usuario"
+                        app:shapeAppearance="@style/ImageStyle_Circle" />
+                    <!--Seller names-->
+
+                    <TextView
+                        android:id="@+id/TV_names"
+                        style="@style/TextAppearance.MaterialComponents.Overline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/imgProfile"
+                        android:text="@string/TV_names"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold|italic" />
+                    <!--Txt register-->
+
+                    <TextView
+                        android:id="@+id/Txt_member"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/TV_names"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@id/imgProfile"
+                        android:text="@string/Txt_member"
+                        android:textColor="@color/white" />
+                    <!--Register Date-->
+                    <TextView
+                        android:id="@+id/Tv_member"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/TV_names"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/Txt_member"
+                        android:layout_marginTop="3dp"
+                        android:text="@string/Tv_member"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/Item_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Tv_member"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@id/imgProfile"
+                        android:ellipsize="end"
+                        android:layout_marginStart="10dp"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:textStyle="italic"
+                        tools:text="@string/Et_email" />
+
+
+                    <TextView
+                        style="@style/TextAppearance.MaterialComponents.Overline"
+                        android:id="@+id/Txt_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/Item_email"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/imgProfile"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/TxtSeeDetailsUser"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/Iv_info_seller"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="@color/white"
+                        android:padding="10dp"
+                        android:src="@drawable/info" />
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--    Options-->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/OptionsLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Profile_seller"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <!--Call-->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/Btn_Call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/navi2"
+                    android:text="@string/Btn_Call"
+                    android:textSize="12sp"
+                    android:textStyle="bold|italic"
+                    app:cornerRadius="16dp"
+                    app:icon="@drawable/ic_op_call"
+                    app:iconTint="@color/white"
+                    app:iconGravity="top" />
+
+                <!--Chat-->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/Btn_Chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:iconTint="@color/navi1"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="2"
+                    android:backgroundTint="@color/navi3"
+                    android:text="@string/Btn_Chat"
+                    android:textSize="12sp"
+                    android:textStyle="bold|italic"
+                    app:cornerRadius="16dp"
+                    app:icon="@drawable/ic_op_chat"
+                    app:iconGravity="top" />
+
+                <!--Map-->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/Btn_Map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:iconTint="@color/white"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/navi2"
+                    android:text="@string/Btn_Map"
+                    android:textSize="12sp"
+                    android:textStyle="bold|italic"
+                    app:cornerRadius="16dp"
+                    app:icon="@drawable/ic_op_map"
+                    app:iconGravity="top" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

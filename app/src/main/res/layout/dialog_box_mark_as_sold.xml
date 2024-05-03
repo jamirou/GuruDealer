@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/naviBlack"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/Txt_Mark_as_sold"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_imagen"
+        android:layout_height="80dp"
+        android:layout_gravity="center" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:id="@+id/Btn_yes"
+            android:textAllCaps="true"
+            app:cornerRadius="20dp"
+            android:layout_marginEnd="10dp"
+            app:tint="@color/white"
+            android:backgroundTint="@color/navi1"
+            android:text="@string/Btn_yes"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            app:cornerRadius="20dp"
+            android:text="@string/Btn_no"
+            android:textAllCaps="true"
+            app:tint="@color/white"
+            android:backgroundTint="@color/navi1"
+            android:id="@+id/Btn_no"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

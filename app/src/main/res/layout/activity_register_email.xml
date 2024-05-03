@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/naviBlack"
+    android:padding="10dp"
+    tools:context=".Register_email_Activity">
+
+    <RelativeLayout
+        android:id="@+id/ToolbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_toolbar_height"
+        android:layout_marginBottom="10dp"
+        android:background="@color/naviBlack">
+
+        <ImageButton
+            android:id="@+id/Ib_regresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_back" />
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@color/naviBlack">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/naviBlack"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextAppearance.MaterialComponents.Overline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Txt_Register"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="260dp"
+                    android:layout_height="260dp"
+                    android:src="@drawable/guru" />
+
+
+                <!--Email-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TIL_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/navi2"
+                    android:textColorHint="@color/white"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:hintTextColor="@color/almostWhite">
+
+                    <EditText
+                        android:id="@+id/Et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/navi2"
+                        android:hint="@string/Et_email"
+                        android:inputType="textEmailAddress"
+                        android:shadowColor="@color/white"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--Password-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TIL_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TIL_email"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/navi2"
+                    android:textColorHint="@color/white"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:hintTextColor="@color/almostWhite"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white">
+
+                    <EditText
+                        android:id="@+id/Et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/navi2"
+                        android:hint="@string/Et_password"
+                        android:inputType="textPassword"
+                        android:shadowColor="@color/white"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!--RepeatPassword-->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TIL_password"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/navi2"
+                    android:textColorHint="@color/white"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:hintTextColor="@color/almostWhite"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/white">
+
+                    <EditText
+                        android:id="@+id/Ed_R_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/navi2"
+                        android:hint="@string/Ed_R_password"
+                        android:inputType="textPassword"
+                        android:shadowColor="@color/white"
+                        android:textColor="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/Btn_Register"
+                    android:layout_width="180dp"
+                    android:layout_height="@dimen/my_button_height"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/navi4"
+                    android:text="@string/Btn_Register"
+                    android:textAllCaps="true"
+                    app:tint="@color/white" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

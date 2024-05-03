@@ -1,0 +1,231 @@
+<resources>
+    <string name="app_name">Guru dealer</string>
+    <string name="item_start">Tienda</string>
+    <string name="item_chats">Chats</string>
+    <string name="item_sell">Vender</string>
+    <string name="item_mis_anuncios">Mío</string>
+    <string name="item_cuenta">Perfil</string>
+    <string name="titleRL">Título</string>
+
+    <string name="my_google_maps_api_key">YOUR_API_KEY</string>
+
+    <!--    AdMob-->
+    <!--    General ID-->
+    <string name="ID_test">YOUR_API_KEY</string>
+    <string name="ID_AdMobProduction">YOUR_API_KEY</string>
+
+    <!--    Banner DetailSellerAct ID-->
+    <string name="ID_Test_BannerDetailSeller">YOUR_API_KEY</string>
+    <string name="ID_Production_BannerDetailSeller">YOUR_API_KEY</string>
+
+
+    <!--    Banner My FavAds_Published-->
+    <string name="ID_Test_BannerMyFavoritesAds">YOUR_API_KEY</string>
+    <string name="ID_Production_BannerMyFavAds">YOUR_API_KEY</string>
+
+    <!--    Interstitial Chats-->
+    <string name="ID_Test_InterstitialChats">YOUR_API_KEY</string>
+    <string name="ID_Production_InterstitialChats">YOUR_API_KEY</string>
+
+    <!--    Interstitial DetailSellerAct ID-->
+    <string name="ID_Test_DetailSellerInterstitial">YOUR_API_KEY</string>
+    <string name="ID_Production_DetailSellerInterstitial">YOUR_API_KEY</string>
+
+
+    <string name="log_in_email">Ingresar con email</string>
+    <string name="log_in_google">Ingresar con google</string>
+
+    <string name="Developer">©2024 Desarrollado por Jam</string>
+
+    <string name="txt_login">Inicia sesión</string>
+    <string name="Et_email">Email</string>
+    <string name="Et_password">Contraseña</string>
+    <string name="Btn_getIn">Ingresar</string>
+    <string name="No_Account">¿No tienes una cuenta?</string>
+    <string name="Register">REGISTRARME</string>
+
+    <string name="Txt_Register">Registrar</string>
+    <string name="Ed_R_password">Repetir contraseña</string>
+    <string name="Btn_Register">Registrar</string>
+
+
+    <!--UserProfile-->
+    <string name="Txt_Profile">Usuario</string>
+    <string name="Txt_info">Información personal </string>
+    <string name="Txt_names">Nombres: </string>
+    <string name="TV_names">Nombres completos: </string>
+    <string name="Txt_email">Email: </string>
+    <string name="TV_email">email@dominio.com</string>
+    <string name="Txt_birthday">Edad: </string>
+    <string name="Tv_birthday">18</string>
+    <string name="Txt_member">Fecha de registro: </string>
+    <string name="Tv_member">dd/mm/aaaa</string>
+    <string name="Txt_phone">teléfono: </string>
+    <string name="Tv_phone">999999999</string>
+    <string name="Txt_account_status">Estado de cuenta: </string>
+    <string name="Tv_account_status">No verificado</string>
+    <string name="Profile_Image">Imagen de perfil</string>
+
+    <string name="Txt_Options">Opciones</string>
+    <string name="Btn_edit_profile">Editar perfil</string>
+    <string name="Btn_sign_out">Cerrar sesion</string>
+    <string name="Btn_premium">Quitar anuncios</string>
+    <string name="Btn_deleteAccount">Eliminar cuenta</string>
+    <string name="Btn_change_password">Cambiar contraseña</string>
+    <string name="Btn_verify_account">Verificar cuenta</string>
+
+
+    <!--    Edit profile-->
+    <string name="Txt_edit_profile">Editar perfil</string>
+    <string name="Et_Names">Nombre completo</string>
+    <string name="Et_Birthday">Edad (+18)</string>
+    <string name="Et_phone_code"> +00 </string>
+    <string name="Et_phone">Teléfono</string>
+    <string name="Btn_update">Actualizar</string>
+
+    <!--    Create New announcement-->
+    <string name="Et_marca">Marca o modelo</string>
+    <string name="Category">Categoría</string>
+    <string name="Condition">Condición</string>
+    <string name="Location">Ubicación</string>
+    <string name="Et_Price">Precio en CLP</string>
+    <string name="Et_Title">Título</string>
+    <string name="Et_Description">Descripción</string>
+    <string name="Btn_create_announcement">Publicar</string>
+
+    <!--Maps-->
+    <string name="Txt_select_location">Seleccione ubicación</string>
+    <string name="Btn_listo">Hecho</string>
+
+    <!--Fragment Start-->
+    <string name="Tv_Location">Ubicación</string>
+    <string name="Et_search">Buscar</string>
+    <string name="Txt_category">Categoría:</string>
+    <string name="Tv_category">Categoría</string>
+
+    <!--    Item announcement-->
+    <string name="Tv_title">Nombre del producto</string>
+    <string name="Tv_description">Descripción del producto</string>
+    <string name="Tv_direction">Dirección</string>
+    <string name="Tv_condition">Nuevo</string>
+    <string name="Tv_simbol">CLP  </string>
+    <string name="Tv_price">0</string>
+    <string name="Tv_date">dd/MM/yyyy</string>
+
+    <string name="Txt_detail_announce">Detalles del anuncio</string>
+    <string name="Tv_cat">Categoría</string>
+    <string name="Txt_title">Título</string>
+    <string name="Txt_description">Descripción</string>
+    <string name="Tv_descr">Descripción</string>
+    <string name="Txt_direction">Dirección:</string>
+    <string name="Txt_views">Vistas:</string>
+    <string name="Tv_views">0</string>
+    <string name="Txt_Seller">Perfil del usuario</string>
+    <string name="Tv_status">Disponible</string>
+
+    <!--    Options detail AD-->
+    <string name="Btn_Map">Mapa</string>
+    <string name="Btn_Call">Llamar</string>
+    <string name="Btn_Chat">Chat</string>
+
+    <string name="imageCounterTv">1/4</string>
+
+    <!--    Dialog Box delete Img-->
+    <string name="Txt_Delete">¿Eliminar imagen?</string>
+    <string name="Btn_agree">Eliminar</string>
+    <string name="Btn_cancel">Cancelar</string>
+
+    <!--    Dialog Box Marc as sold-->
+    <string name="Txt_Mark_as_sold">¿Dejar como vendido?</string>
+    <string name="Btn_yes">Si</string>
+    <string name="Btn_no">No</string>
+
+    <string name="Txt_seller_profile">Vendedor</string>
+    <string name="Txt_announces">Cantidad publicaciones:</string>
+    <string name="Tv_num_announces">0</string>
+
+    <string name="Txt_comments">Detalles del usuario</string>
+    <string name="Txt_Add_comment">Agregar comentario</string>
+
+    <string name="Et_add_comment">Añadir comentario</string>
+    <string name="Btn_comment">Publicar</string>
+
+    <string name="Tv_names_comment">Nombres</string>
+    <string name="Tv_date_comment">dd/MM/yyyy</string>
+    <string name="Tv_comment">Comentario</string>
+
+    <string name="Txt_forgot_password">¿Has olvidado tu contraseña?</string>
+    <string name="Tv_recover_password">Recuperar</string>
+
+    <string name="Txt_recover">Recuperar contraseña</string>
+    <string name="Txt_instructions">Para recuperar su contraseña ingrese su correo electrónico registrado.</string>
+    <string name="Btn_send_instructions">Enviar</string>
+
+    <string name="Txt_change_password">Cambio de contraseña</string>
+    <string name="Txt_instructions_change_password">La nueva contraseña debe ser distinta a la anterior</string>
+    <string name="Et_password_actual">Contraseña actual</string>
+    <string name="Et_password_new">Nueva contraseña</string>
+    <string name="Et_password_new_r">Repita nueva contraseña</string>
+    <string name="Btn_update_password">Cambiar</string>
+
+    <!--Chats-->
+    <string name="Txt_seller_name_chat">Vendedor</string>
+    <string name="Txt_chat_status">desconectado</string>
+
+    <string name="Et_message_chat">Escribir</string>
+    <string name="Tv_time_message">dd/MM/yyyy hh:mm</string>
+    <string name="Btn_close_viewer">Cerrar</string>
+
+    <string name="Txt_deleteAccount">Eliminar cuenta</string>
+    <string name="Btn_deleteMyAccount">Eliminar</string>
+    <string name="Txt_messageDelete">Eliminar cuenta de manera permanente?</string>
+
+
+    <string name="SignInWith">Ingrese con una de las opciones:</string>
+    <string name="Title_termsConditions">Al ingresar aceptas cumplir los términos y condiciones…</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Edit_profile_image">editar imagen</string>
+    <string name="add_img">agregar imagen</string>
+    <string name="back">Atras</string>
+    <string name="seleccionar_ubicacion">Seleccionar ubicacion</string>
+    <string name="gmailText">Gmail</string>
+    <string name="googleText">Google</string>
+    <string name="FacebookText">Facebook</string>
+    <string name="gmail_icon">Gmail icon</string>
+    <string name="google_icon">Google Icon</string>
+    <string name="facebook_icon">Facebook Icon</string>
+
+    <string name="favorite_icon">Favorite Icon</string>
+    <string name="txt_detailsuser">ver comentarios</string>
+    <string name="TxtSeeDetailsUser">ver detalles</string>
+    <string name="txt_menu_profile">Perfil</string>
+
+    <string name="termsandconditions">1. Aceptación de los Términos
+Al acceder o utilizar la aplicación GuruDealer, en adelante "la Aplicación", usted acepta los siguientes términos y condiciones de uso. Si no está de acuerdo con estos términos, por favor, absténgase de usar la Aplicación.
+2. Uso Adecuado de la Aplicación
+2.1. El usuario acepta utilizar la Aplicación únicamente para propósitos legales y de conformidad con todas las leyes aplicables en su jurisdicción.
+2.2. Queda expresamente prohibido el uso de la Aplicación para la venta, promoción o facilitación de cualquier sustancia ilegal, incluyendo, pero no limitándose a, drogas ilegales o productos relacionados con el consumo de drogas ilegales.
+3. Responsabilidad del Usuario
+3.1. El usuario es el único responsable de su conducta al utilizar la Aplicación.
+3.2. El usuario acepta no utilizar la Aplicación con fines ilícitos o que puedan infringir los derechos de terceros.
+3.3. El usuario reconoce que cualquier mal uso de la Aplicación, incluyendo la venta de productos ilegales, será de su exclusiva responsabilidad.
+4. Responsabilidad del Desarrollador
+4.1. El desarrollador de la Aplicación no asume responsabilidad alguna por el uso inadecuado que hagan los usuarios de la misma.
+4.2. El desarrollador no garantiza la legalidad, calidad o seguridad de los productos o servicios ofrecidos por terceros a través de la Aplicación.
+5. Apoyo a Emprendedores y Tiendas Locales
+5.1. La Aplicación tiene como objetivo principal apoyar a emprendedores y tiendas locales al facilitar la venta de sus productos.
+5.2. El usuario reconoce que el desarrollador no tiene control sobre la calidad o legalidad de los productos ofrecidos por terceros a través de la Aplicación.
+6. Modificaciones de los Términos y Condiciones
+6.1. El desarrollador se reserva el derecho de modificar estos términos y condiciones en cualquier momento.
+6.2. Se notificará a los usuarios sobre cualquier cambio en los términos y condiciones mediante la publicación de la versión actualizada en la Aplicación.
+7. Legislación Aplicable
+7.1. Estos términos y condiciones se regirán e interpretarán de acuerdo con las leyes de [Jurisdicción], sin tener en cuenta sus disposiciones sobre conflicto de leyes.
+Al utilizar la Aplicación, usted acepta someterse a la jurisdicción exclusiva de los tribunales de [Jurisdicción].</string>
+    <string name="report_user">Reportar</string>
+    <string name="Comments_user_txt">Comentarios al usuario</string>
+    <string name="instagramIc">Icono de instagram</string>
+    <string name="patreonIc">Icono de patreon</string>
+</resources>

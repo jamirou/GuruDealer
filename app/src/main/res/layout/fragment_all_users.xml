@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/naviBlack"
+    android:orientation="vertical"
+    tools:context=".fragments.FragmentAllUsers">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/SearchMV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/naviBlack"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp">
+
+        <EditText
+            android:id="@+id/Et_search_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:hint="@string/Et_search"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/almostWhite"
+            app:drawableStartCompat="@drawable/ic_search">
+        </EditText>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RV_users"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_user">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

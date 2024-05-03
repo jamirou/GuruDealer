@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/naviBlack"
+    android:layout_height="match_parent"
+    tools:context=".SelectLocationActivity">
+
+    <RelativeLayout
+        android:id="@+id/ToolbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_toolbar_height">
+
+        <ImageButton
+            android:id="@+id/Ib_regresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/Txt_select_location"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <ImageButton
+            android:id="@+id/Ib_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_gps"
+            android:contentDescription="@string/seleccionar_ubicacion" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/navi1" />
+
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/MapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ToolbarRL" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ToolbarRL"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true">
+
+        <fragment
+            android:id="@+id/autocomplete_fragment"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/listoLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/navi2"
+
+            app:cardCornerRadius="8dp"
+            android:backgroundTint="@color/navi2"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="10dp">
+
+            <TextView
+                android:id="@+id/lugarSelectedTv"
+                android:layout_width="match_parent"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Btn_listo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tint="@color/white"
+            android:backgroundTint="@color/navi1"
+            android:text="@string/Btn_listo"
+            android:textAllCaps="true"
+            app:cornerRadius="8dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

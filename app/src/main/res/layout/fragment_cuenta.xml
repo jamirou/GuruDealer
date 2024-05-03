@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/naviBlack"
+    android:padding="20dp"
+    tools:context=".fragments.FragmentCuenta">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/Txt_Profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="1sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/Iv_Profile"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_below="@id/Txt_Profile"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/Profile_Image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/usuario"
+            app:shapeAppearance="@style/ImageStyle_Circle" />
+
+        <TextView
+            android:id="@+id/Txt_info"
+            style="@style/TextAppearance.MaterialComponents.Overline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Iv_Profile"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/Txt_info"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!--nombres-->
+        <TextView
+            android:id="@+id/Txt_names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Txt_info"
+            android:layout_marginTop="15dp"
+            android:text="@string/Txt_names"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/TV_names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Txt_info"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/TV_names"
+            android:textColor="@color/white" />
+
+        <!--email-->
+        <TextView
+            android:id="@+id/Txt_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Txt_names"
+            android:layout_marginTop="15dp"
+            android:text="@string/Txt_email"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/TV_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Txt_names"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/TV_email"
+            android:textColor="@color/white" />
+
+        <!--birthday-->
+        <TextView
+            android:id="@+id/Txt_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Txt_email"
+            android:layout_marginTop="15dp"
+            android:text="@string/Txt_birthday"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/Tv_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Txt_email"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/Tv_birthday"
+            android:textColor="@color/white" />
+
+        <!--data member -->
+        <TextView
+            android:id="@+id/Txt_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Txt_birthday"
+            android:layout_marginTop="15dp"
+            android:text="@string/Txt_member"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/Tv_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Txt_birthday"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/Tv_member"
+            android:textColor="@color/white" />
+
+        <!--phone-->
+        <TextView
+            android:id="@+id/Txt_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Txt_member"
+            android:layout_marginTop="15dp"
+            android:text="@string/Txt_phone"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/Tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Txt_member"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/Tv_phone"
+            android:textColor="@color/white" />
+
+        <!--account status-->
+        <TextView
+            android:id="@+id/Txt_account_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Txt_phone"
+            android:layout_marginTop="15dp"
+            android:text="@string/Txt_account_status"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/Tv_account_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Txt_phone"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/Tv_account_status"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/Txt_Options"
+            style="@style/TextAppearance.MaterialComponents.Overline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Txt_account_status"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+        <!--            android:text="@string/Txt_Options"-->
+
+        <LinearLayout
+            android:id="@+id/LLContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Txt_Options"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--edit profile-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Btn_edit_profile"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/navi1"
+                android:text="@string/Btn_edit_profile"
+                android:textAllCaps="true"
+                app:icon="@drawable/ic_edit"
+                app:iconGravity="textStart"
+                app:tint="@color/white" />
+
+            <!--Verify account-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Btn_verify_account"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/navi1"
+                android:text="@string/Btn_verify_account"
+                android:textAllCaps="true"
+                app:icon="@drawable/ic_verify_account"
+                app:tint="@color/white" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/BtnContainerVerify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/LLContainer"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--Change password-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Btn_change_password"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/navi1"
+                android:text="@string/Btn_change_password"
+                android:textAllCaps="true"
+                app:icon="@drawable/ic_password"
+                app:tint="@color/white" />
+
+            <!--sign out-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Btn_sign_out"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/navi1"
+                android:text="@string/Btn_sign_out"
+                android:textAllCaps="true"
+                app:icon="@drawable/baseline_exit_to_app_24"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Btn_premium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/BtnContainerVerify"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/patreonIcon"
+                    android:layout_width="match_parent"
+                    android:clickable="true"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/instagramIc"
+                    android:src="@drawable/patreon"
+                    android:focusable="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_weight="1"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/instagram_icon"
+                    android:layout_width="match_parent"
+                    android:clickable="true"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@string/instagramIc"
+                    android:src="@drawable/instagram"
+                    android:focusable="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:clickable="true"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/mail_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/gmail_icon"
+                    android:focusable="true"
+                    android:src="@drawable/mail_icon" />
+            </RelativeLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Btn_deleteAccount"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="3"
+                android:backgroundTint="@color/navi3"
+                android:text="@string/Btn_deleteAccount"
+                android:textAllCaps="true"
+                app:icon="@drawable/ic_warning"
+                app:iconGravity="textStart"
+                app:iconSize="20dp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

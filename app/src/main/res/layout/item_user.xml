@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/navi3"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardCornerRadius="15dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="8dp"
+    app:strokeColor="@android:color/transparent"
+    app:strokeWidth="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeColor="@android:color/transparent"
+        app:strokeWidth="0dp">
+
+        <!--Profile Image-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/Item_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/ImageStyle_Circle"
+            tools:src="@tools:sample/avatars" />
+
+        <!--Name-->
+        <TextView
+            android:id="@+id/Item_names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/Item_image"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:text="@tools:sample/full_names" />
+
+        <!--Email-->
+        <TextView
+            android:id="@+id/Item_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Item_names"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/Item_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/almostWhite"
+            android:textStyle="italic"
+            tools:text="@string/Et_email" />
+
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_make_a_friend" />
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

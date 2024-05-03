@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/naviBlack"
+    android:padding="5dp"
+    tools:context=".ComentsActivity">
+
+    <RelativeLayout
+        android:id="@+id/ToolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_toolbar_height"
+        android:background="@color/naviBlack">
+
+        <ImageButton
+            android:id="@+id/Ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Overline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/Comments_user_txt"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/navi1" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_Add_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ToolbarRl"
+        android:background="@color/naviBlack">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Txt_Add_comment"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:iconGravity="textStart"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/navi1"
+            android:padding="10dp"
+            android:text="@string/Txt_Add_comment"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_comment"
+            app:tint="@color/white" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RV_comments_add_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/Txt_Add_comment"
+            android:padding="9dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_coment" />
+    </RelativeLayout>
+
+</RelativeLayout>

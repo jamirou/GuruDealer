@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/naviBlack"
+    android:layout_height="match_parent"
+    tools:context=".chat.ChatActivity">
+
+    <RelativeLayout
+        android:id="@+id/ToolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/naviBlack">
+
+        <ImageButton
+            android:id="@+id/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            app:tint="@color/white"
+            android:src="@drawable/ic_back" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/toolbarIv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/usuario"
+            android:layout_toEndOf="@+id/ic_back"
+            app:shapeAppearance="@style/ImageStyle_Circle" />
+
+        <TextView
+            android:id="@+id/Txt_seller_name_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/Txt_seller_name_chat"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Txt_chat_status"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Txt_seller_name_chat"
+            android:layout_centerHorizontal="true"
+            android:text="@string/Txt_chat_status"
+            android:textSize="12sp" />
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="2dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="10dp"
+            android:src="@drawable/ic_my_own"
+            app:tint="@color/white" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/navi1" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ChatsRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="7dp"
+        android:layout_above="@+id/View02"
+        android:layout_below="@+id/ToolbarRl"
+        android:background="@color/navi3"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_chat_left" />
+
+    <View
+        android:id="@+id/View02"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/RL_Message"
+        android:background="@color/navi1" />
+
+    <RelativeLayout
+        android:id="@+id/RL_Message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/naviBlack"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+
+        <!--Text message-->
+        <EditText
+            android:id="@+id/Et_message_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/almostWhite"
+            android:textColor="@color/white"
+            android:layout_toStartOf="@id/Send_FAB"
+            android:layout_toEndOf="@id/Attach_FAB"
+            android:layout_centerVertical="true"
+            android:hint="@string/Et_message_chat"
+            android:inputType="textMultiLine|textCapSentences"
+            android:paddingStart="10dp"
+            android:paddingEnd="40dp" />
+
+        <!--Attach message-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Attach_FAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:elevation="0dp"
+            app:tint="@color/navi1"
+            android:backgroundTint="@color/naviBlack"
+            android:src="@drawable/ic_attach_image"
+            app:fabSize="mini" />
+
+        <!--Send message-->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Send_FAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tint="@color/navi1"
+            android:backgroundTint="@color/naviBlack"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:elevation="0dp"
+            android:src="@drawable/ic_send"
+            app:fabSize="mini" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/naviBlack"
+    android:padding="5dp">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:background="@color/naviBlack"
+        android:layout_height="wrap_content">
+
+        <!--Select Location-->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/naviBlack"
+            app:cardCornerRadius="5dp"
+            app:cardUseCompatPadding="false"
+            app:contentPadding="2dp"
+            app:strokeColor="@android:color/transparent"
+            app:strokeWidth="0dp">
+
+            <TextView
+                android:id="@+id/Tv_Location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@color/naviBlack"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="@string/Tv_Location"
+                android:textColor="@color/almostWhite"
+                android:textStyle="bold"
+                app:drawableEndCompat="@drawable/ic_next"
+                app:drawableStartCompat="@drawable/ic_location" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--Search AD-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/white"
+                app:cardUseCompatPadding="false"
+                app:contentPadding="2dp"
+                app:hintTextColor="@color/white"
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="0dp">
+
+                <EditText
+                    android:id="@+id/Et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/navi2"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="4dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    app:drawableStartCompat="@drawable/ic_search" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Category List-->
+
+            <!--Announce List-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoryRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/naviBlack"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_category_start" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/announcesRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3"
+                tools:listitem="@layout/item_announces_new_version" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

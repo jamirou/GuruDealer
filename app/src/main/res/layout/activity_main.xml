@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/ToolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/my_toolbar_height"
+        android:background="@color/naviBlack">
+
+        <TextView
+            android:id="@+id/titleRL"
+            style="@style/TextAppearance.MaterialComponents.Overline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/titleRL"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/navi1" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/FragmentL1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/View1"
+        android:layout_below="@+id/ToolbarRl"
+        android:background="@color/navi2" />
+
+    <View
+        android:id="@+id/View1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/BtnNV"
+        android:background="@color/naviBlack" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/BtnNV"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/naviBlack"
+        app:itemIconTint="@color/white"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/my_menu"
+        app:itemActiveIndicatorStyle="@color/navi3"
+        app:itemRippleColor="@color/navi3"
+        app:strokeWidth="0dp" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="@color/navi1"
+        android:contentDescription="@string/fab_transformation_scrim_behavior"
+        android:src="@drawable/ic_add"
+        app:fabCustomSize="35dp"
+        app:tint="@color/white" />
+
+
+</RelativeLayout>
